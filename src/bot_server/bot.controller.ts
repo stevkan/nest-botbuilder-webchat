@@ -1,6 +1,5 @@
 import { Controller, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
-import { Observable } from 'rxjs';
 import { BotService } from './bot.service';
 
 // Import required bot services.

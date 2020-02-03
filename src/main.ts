@@ -1,10 +1,11 @@
 import { NestFactory } from '@nestjs/core';
+import * as path from 'path';
+import { config } from 'dotenv';
 import { BotModule } from './bot_server/bot.module';
 import { TokenModule } from './token_server/token.module';
 
-import { resolve } from 'path';
-import { config } from 'dotenv';
-config( { path: resolve( __dirname, "../.env" ) } )
+const ENV_FILE = path.join( __dirname, '..', '.env' );
+config( { path: ENV_FILE } );
 
 async function bootstrap() {
   const port = {};
