@@ -5,7 +5,7 @@ import { ClientService } from './client.service'
 export class ClientController {
   constructor( private readonly clientService: ClientService ) {}
 
-  @Get( 'react' )
+  @Get( )
   @Render('index')
   root() {
     return { message: 'Hello World' };
